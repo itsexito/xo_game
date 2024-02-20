@@ -76,6 +76,9 @@ function endgame(n1,n2,n3) {
 
 function endgameDraw() {
     title.innerHTML = "DRAW X & O";
+        for(let x = 1; x < 10; x++){
+        document.getElementById("i-" + x).style['pointer-events'] = 'none';
+    }
     setInterval(function () {
         title.innerHTML += ".";
     }, 1000);

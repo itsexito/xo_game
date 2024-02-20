@@ -63,9 +63,13 @@ function win() {
 
 function endgame(n1,n2,n3) {
     title.innerHTML = `${box[n1]} Is Winner`;
+    for(let x = 1; x < 10; x++){
+        document.getElementById("i-" + x).style['pointer-events'] = 'none';
+    }
     document.getElementById("i-" + n1).style.background = '#FDCB9E';
     document.getElementById("i-" + n2).style.background = '#FDCB9E';
     document.getElementById("i-" + n3).style.background = '#FDCB9E';
+    
     setInterval(function() {title.innerHTML += ".";},1000);
     setTimeout(function(){location.reload()},3000);
 }
